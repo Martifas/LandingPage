@@ -31,11 +31,10 @@
   line-height: 40px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
-#menu nav a:not(:first-of-type) {
-  margin-left: 20px;
-}
+
 
 #menu nav a:hover {
   border-color: white;

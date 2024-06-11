@@ -31,13 +31,13 @@ nav a {
     transition: all 0.2s ease-in-out;
 }
 
-#menu nav a:hover {
+nav a:hover {
     border-color: white;
     color: white;
-  }
+}
 
 nav img {
-    padding-right: 10px;
+    padding-right: 0px;
 }
 
 
@@ -49,26 +49,15 @@ nav img {
 }
 
 .contact-header {
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px black;
 }
 
 #logo {
     display: flex;
     height: 40px;
     justify-content: center;
-  }
-
-#menu nav a.btn {
-    color: black;
-    border-radius: 100px;
-    border: 0;
-    padding: 0 1.5rem;
 }
 
-#menu nav a.btn:hover {
-    background: var(--bs-warning);
-    color: white;
-}
 
 #contact-form form {
     display: grid;
@@ -142,7 +131,7 @@ nav img {
     }
 
     #contact-form form {
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     #header::before {
@@ -150,4 +139,12 @@ nav img {
                 rgba(0, 0, 0, 0) 60%,
                 rgba(0, 0, 0, 0.7));
     }
+
+    nav img {
+        padding-right: 10px;
+    }
+}
+
+#contact-form form .submit button:hover {
+    background: #cc9a05;
 }

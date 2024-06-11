@@ -1,0 +1,67 @@
+header {
+    position: relative; /* Ensure positioning context for the pseudo-element */
+    background-image:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 0.7)),
+        url('/images/contact-form.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: left;
+    padding: 0 10vw;
+    box-sizing: border-box;
+    z-index: 1; 
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: -1;
+}
+
+.contact-message {
+    font-size: 170%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30% 1% 5% 1%;
+    text-shadow: 1px 1px black;
+    max-width: 100%;
+    position: relative; 
+    z-index: 2; 
+}
+
+.contact-message a {
+    border-bottom: 1px solid transparent;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-message a:hover {
+    border-color: white;
+    background: #cc9a05;
+}
+
+.contact-message .btn {
+    color: black;
+    border-radius: 100px;
+    border: 0;
+    outline: none;
+    text-align: center;
+    vertical-align: bottom;
+    margin-top: 1.5rem;
+}

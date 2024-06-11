@@ -46,7 +46,7 @@
   color: black;
   border-radius: 100px;
   border: 0;
-  padding: 0 1.5rem;
+  padding: 0 0.5rem;
 }
 
 #menu nav a.btn:hover {
@@ -69,7 +69,6 @@
 }
 
 header {
-  /* A way to use an image in a background: */
   background-image:
     linear-gradient(
       to bottom,
@@ -78,24 +77,15 @@ header {
     ),
     url('/images/header.jpg');
   background-position: center;
-
-  /* if we Google "css fill background with image", we find this: */
   background-size: cover;
-
-  /* make the text white */
   color: white;
-
-  /* make the element take up the entire height of the screen */
   height: 100vh;
-
-  /* space out children */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   padding-bottom: 30px;
-
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px black;
 }
 
 header h1 {
@@ -113,9 +103,10 @@ header h1 {
   display: grid;
   grid-template-areas:
     "destination destination destination"
-    "from to guests"
+    "from . to"
+    "guests guests guests"
     "submit submit submit";
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 2fr 0fr 2fr;
   grid-auto-flow: column;
   gap: 10px;
 }
@@ -156,6 +147,7 @@ header h1 {
 
 @media screen and (min-width: 768px) {
   #book form {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
       "destination from to guests submit";
   }

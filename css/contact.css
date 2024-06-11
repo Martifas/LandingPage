@@ -1,0 +1,153 @@
+header {
+    background-image:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 0.7)),
+        url('/images/contact-form.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#topbar {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0));
+    padding: 20px;
+}
+
+
+nav a {
+    color: white;
+    border-bottom: 1px solid transparent;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#menu nav a:hover {
+    border-color: white;
+    color: white;
+  }
+
+nav img {
+    padding-right: 10px;
+}
+
+
+#topbar>.wrap {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+}
+
+.contact-header {
+    text-shadow: 2px 2px black;
+}
+
+#logo {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+  }
+
+#menu nav a.btn {
+    color: black;
+    border-radius: 100px;
+    border: 0;
+    padding: 0 1.5rem;
+}
+
+#menu nav a.btn:hover {
+    background: var(--bs-warning);
+    color: white;
+}
+
+#contact-form form {
+    display: grid;
+    grid-template-areas:
+        "name . surname"
+        "email email email"
+        "phone-number phone-number phone-number"
+        "contact-text contact-text contact-text"
+        "submit submit submit";
+    grid-template-columns: 2fr 0fr 2fr;
+    grid-auto-flow: column;
+    column-gap: 2%;
+    font-weight: bold;
+    text-shadow:
+        1px 1px #000;
+    row-gap: 30px;
+}
+
+#contact-form button[type="submit"] {
+    border-radius: 100px;
+    border: 0;
+    outline: none;
+    text-align: center;
+    vertical-align: bottom;
+    margin-top: 1.5rem;
+}
+
+#contact-form form .name {
+    grid-area: name;
+}
+
+#contact-form form .surname {
+    grid-area: surname;
+}
+
+#contact-form form .email {
+    grid-area: email;
+}
+
+#contact-form form .phone-number {
+    grid-area: phone-number;
+}
+
+#contact-form form .submit {
+    grid-area: submit;
+}
+
+#contact-form form .submit button {
+    width: 100%;
+}
+
+#contact-form form .contact-text {
+    grid-area: contact-text;
+}
+
+#contact-form form .contact-text textarea {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    #contact-form form {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "name surname email phone-number"
+            "contact-text contact-text contact-text contact-text"
+            ". . . submit";
+    }
+
+    .contact-header h1 {
+        font-size: 54px;
+    }
+
+    #contact-form form {
+        font-size: 18px; 
+    }
+
+    #header::before {
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0) 60%,
+                rgba(0, 0, 0, 0.7));
+    }
+}

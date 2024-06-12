@@ -1,1 +1,1 @@
-# LandingPage
+Landing page for travel agency

@@ -7,7 +7,7 @@ header {
     background-position: center;
     background-size: cover;
     color: white;
-    height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,6 +20,37 @@ header {
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0));
     padding: 20px;
+    text-shadow: 1px 1px black;
+}
+
+section {
+    background-color: whitesmoke;
+    min-height: 40vh;
+    padding-top: 20px;
+}
+
+#menu nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#menu nav a {
+    color: white;
+    border-bottom: 1px solid transparent;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+#menu nav a:nth-child(2) {
+    padding-left: 10px;
+}
+
+#menu nav a:hover {
+    border-color: white;
+    color: white;
 }
 
 
@@ -29,11 +60,6 @@ nav a {
     line-height: 40px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
-}
-
-nav a:hover {
-    border-color: white;
-    color: white;
 }
 
 nav img {
@@ -48,16 +74,22 @@ nav img {
     padding-bottom: 20px;
 }
 
-.contact-header {
-    text-shadow: 1px 1px black;
-}
-
 #logo {
     display: flex;
     height: 40px;
-    justify-content: center;
+    justify-content: right;
+    padding-right: 10px;
 }
 
+@media screen and (min-width: 542px) {
+    #logo {
+        justify-content: center;
+    }
+}
+
+.contact-header h1 {
+    text-shadow: 1px 1px black;
+}
 
 #contact-form form {
     display: grid;
@@ -71,9 +103,7 @@ nav img {
     grid-auto-flow: column;
     column-gap: 2%;
     font-weight: bold;
-    text-shadow:
-        1px 1px #000;
-    row-gap: 30px;
+    row-gap: 20px;
 }
 
 #contact-form button[type="submit"] {
@@ -82,7 +112,8 @@ nav img {
     outline: none;
     text-align: center;
     vertical-align: bottom;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 #contact-form form .name {
@@ -147,4 +178,14 @@ nav img {
 
 #contact-form form .submit button:hover {
     background: #cc9a05;
+}
+
+nav {
+    white-space: nowrap;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }

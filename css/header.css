@@ -1,125 +1,6 @@
-#topbar {
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0));
-  padding: 20px 0;
-}
-
-#topbar>.wrap {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding-bottom: 20px;
-}
-
-#topbar input {
-  text-shadow: 1px 1px black;
-}
-
-#logo {
-  display: flex;
-  height: 40px;
-  justify-content: right;
-  padding-right: 10px;
-}
-
-@media screen and (min-width: 542px) {
-  #logo {
-    justify-content: center;
-  }
-}
-
-nav a {
-  color: white;
-  border-bottom: 1px solid transparent;
-  line-height: 40px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-header nav a:hover {
-  border-color: white;
-  color: white;
-}
-
-nav img {
-  padding-right: 0px;
-}
-
-
-#menu nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-#menu nav a {
-  color: white;
-  border-bottom: 1px solid transparent;
-  line-height: 40px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap;
-}
-
-#menu nav a:nth-child(2) {
-  padding-left: 10px;
-}
-
-#menu nav a:hover {
-  border-color: white;
-  color: white;
-}
-
-#search-field {
-  background-color: transparent;
-  border: none;
-  color: white;
-}
-
-#search-field::placeholder {
-  color: white;
-}
-
-header {
-  background-image:
-    linear-gradient(to bottom,
-      rgba(0, 0, 0, 0) 60%,
-      rgba(0, 0, 0, 0.7)),
-    url('/images/header.jpg');
-  background-position: center;
-  background-size: cover;
-  color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 30px;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-shadow: 1px 1px black;
-}
-
-header h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
-}
-
 #book .tagline {
   text-transform: uppercase;
   text-align: initial;
-}
-
-#book form {
-  display: grid;
-  grid-template-areas:
-    "destination destination destination"
-    "from . to"
-    "guests guests guests"
-    "submit submit submit";
-  grid-template-columns: 2fr 0fr 2fr;
-  grid-auto-flow: column;
-  gap: 10px;
 }
 
 #book button[type="submit"] {
@@ -131,16 +12,24 @@ header h1 {
   margin-top: 1.5rem;
 }
 
+#book form {
+  display: grid;
+  grid-template-areas:
+    "destination destination"
+    "from to"
+    "guests guests"
+    "submit submit";
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
 #book form .destination-select {
   grid-area: destination;
 }
 
 #book form .from {
   grid-area: from;
-}
-
-#book form .to {
-  grid-area: to;
 }
 
 #book form .guests {
@@ -153,6 +42,10 @@ header h1 {
 
 #book form .submit button {
   width: 100%;
+}
+
+#book form .to {
+  grid-area: to;
 }
 
 @media screen and (min-width: 768px) {
@@ -171,4 +64,102 @@ header h1 {
         rgba(0, 0, 0, 0) 60%,
         rgba(0, 0, 0, 0.7));
   }
+}
+
+header {
+  background-image:
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.7)),
+    url('/images/header.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px black;
+}
+
+header h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  padding-left: 5px;
+}
+
+header nav a:hover {
+  border-color: white;
+}
+
+#header {
+  color: white;
+}
+
+#logo {
+  display: flex;
+  height: 40px;
+  justify-content: right;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 542px) {
+  #logo {
+    justify-content: center;
+  }
+}
+
+#menu nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#menu nav a {
+  border-bottom: 1px solid transparent;
+  line-height: 40px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  color: white;
+}
+
+#menu nav a:nth-child(2) {
+  padding-left: 10px;
+}
+
+#menu nav a:hover {
+  border-color: white;
+}
+
+#topbar {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0));
+  padding: 20px;
+}
+
+#topbar>.wrap {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 20px;
+}
+
+nav {
+  white-space: nowrap;
+}
+
+nav a {
+  border-bottom: 1px solid transparent;
+  line-height: 40px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+
+nav img {
+  padding-right: 0px;
 }

@@ -7,56 +7,31 @@ header {
     background-position: center;
     background-size: cover;
     color: white;
-    min-height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 30px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    justify-content: space-between;
+    min-height: 50vh;
+    padding-bottom: 30px;
 }
 
-#topbar {
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0));
-    padding: 20px;
+.contact-header h1 {
     text-shadow: 1px 1px black;
 }
 
-section {
-    background-color: whitesmoke;
-    min-height: 40vh;
-    padding-top: 20px;
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-#menu nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-#menu nav a {
-    color: white;
-    border-bottom: 1px solid transparent;
-    line-height: 40px;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
+nav {
     white-space: nowrap;
 }
 
-#menu nav a:nth-child(2) {
-    padding-left: 10px;
-}
-
-#menu nav a:hover {
-    border-color: white;
-    color: white;
-}
-
-
 nav a {
-    color: white;
     border-bottom: 1px solid transparent;
+    color: white;
     line-height: 40px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -66,33 +41,27 @@ nav img {
     padding-right: 0px;
 }
 
-
-#topbar>.wrap {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-bottom: 20px;
+section {
+    background-color: whitesmoke;
+    min-height: 40vh;
+    padding-top: 20px;
 }
 
-#logo {
-    display: flex;
-    height: 40px;
-    justify-content: right;
-    padding-right: 10px;
-}
-
-@media screen and (min-width: 542px) {
-    #logo {
-        justify-content: center;
-    }
-}
-
-.contact-header h1 {
-    text-shadow: 1px 1px black;
+#contact-form button[type="submit"] {
+    border: 0;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    text-align: center;
+    vertical-align: bottom;
 }
 
 #contact-form form {
+    column-gap: 2%;
     display: grid;
+    font-weight: bold;
+    grid-auto-flow: column;
     grid-template-areas:
         "name . surname"
         "email email email"
@@ -100,32 +69,23 @@ nav img {
         "contact-text contact-text contact-text"
         "submit submit submit";
     grid-template-columns: 2fr 0fr 2fr;
-    grid-auto-flow: column;
-    column-gap: 2%;
-    font-weight: bold;
     row-gap: 20px;
 }
 
-#contact-form button[type="submit"] {
-    border-radius: 100px;
-    border: 0;
-    outline: none;
-    text-align: center;
-    vertical-align: bottom;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+#contact-form form .contact-text {
+    grid-area: contact-text;
 }
 
-#contact-form form .name {
-    grid-area: name;
-}
-
-#contact-form form .surname {
-    grid-area: surname;
+#contact-form form .contact-text textarea {
+    width: 100%;
 }
 
 #contact-form form .email {
     grid-area: email;
+}
+
+#contact-form form .name {
+    grid-area: name;
 }
 
 #contact-form form .phone-number {
@@ -140,29 +100,75 @@ nav img {
     width: 100%;
 }
 
-#contact-form form .contact-text {
-    grid-area: contact-text;
+#contact-form form .submit button:hover {
+    background: #cc9a05;
 }
 
-#contact-form form .contact-text textarea {
-    width: 100%;
+#contact-form form .surname {
+    grid-area: surname;
+}
+
+#logo {
+    display: flex;
+    height: 40px;
+    justify-content: right;
+    padding-right: 10px;
+}
+
+#menu nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#menu nav a {
+    border-bottom: 1px solid transparent;
+    color: white;
+    line-height: 40px;
+    padding-left: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+#menu nav a:hover {
+    border-color: white;
+    color: white;
+}
+
+#topbar {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0));
+    padding: 20px;
+    text-shadow: 1px 1px black;
+}
+
+#topbar>.wrap {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 542px) {
+    #logo {
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    #contact-form form {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            "name surname email phone-number"
-            "contact-text contact-text contact-text contact-text"
-            ". . . submit";
-    }
-
     .contact-header h1 {
         font-size: 54px;
     }
 
     #contact-form form {
         font-size: 18px;
+        grid-template-areas:
+            "name surname email phone-number"
+            "contact-text contact-text contact-text contact-text"
+            ". . . submit";
+        grid-template-columns: repeat(4, 1fr);
     }
 
     #header::before {
@@ -174,18 +180,4 @@ nav img {
     nav img {
         padding-right: 10px;
     }
-}
-
-#contact-form form .submit button:hover {
-    background: #cc9a05;
-}
-
-nav {
-    white-space: nowrap;
-}
-
-h2 {
-    font-size: 50px;
-    font-weight: bold;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }

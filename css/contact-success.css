@@ -7,59 +7,30 @@ header {
     background-position: center;
     background-size: cover;
     color: white;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 30px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-bottom: 30px;
     text-shadow: 1px 1px black;
-}
-
-.contact-message {
-    padding-top: 15px;
-    font-size: 20px;;
-}
-
-.contact-message a {
-    border-bottom: 1px solid transparent;
-    line-height: 40px;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
 }
 
 h2 {
     font-size: 50px;
     font-weight: bold;
-  }
-
-.contact-message a:hover {
-    border-color: white;
-    background: #cc9a05;
 }
 
-.contact-message .btn {
-    color: black;
-    border-radius: 100px;
-    border: 0;
-    outline: none;
-    text-align: center;
-    vertical-align: bottom;
-    margin-top: 1.5rem;
+nav {
+    white-space: nowrap;
 }
 
-#topbar {
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0));
-    padding: 20px 0;
-}
-
-#topbar>.wrap {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-bottom: 20px;
+nav a {
+    border-bottom: 1px solid transparent;
+    color: white;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
 }
 
 #logo {
@@ -76,8 +47,8 @@ h2 {
 }
 
 #menu nav a {
-    color: white;
     border-bottom: 1px solid transparent;
+    color: white;
     line-height: 40px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -93,20 +64,66 @@ h2 {
     color: white;
 }
 
+#topbar {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0));
+    padding: 20px 0;
+}
+
+#topbar>.wrap {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+}
+
+.contact-message {
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.contact-message a {
+    border-bottom: 1px solid transparent;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-message a:hover {
+    background: #cc9a05;
+    border-color: white;
+}
+
+.contact-message .btn {
+    border: 0;
+    border-radius: 100px;
+    color: black;
+    margin-top: 1.5rem;
+    outline: none;
+    text-align: center;
+    vertical-align: bottom;
+}
+
 @media screen and (min-width: 542px) {
     #logo {
         justify-content: center;
     }
 }
 
-nav {
-    white-space: nowrap;
-}
 
-nav a {
-    color: white;
-    border-bottom: 1px solid transparent;
-    line-height: 40px;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
+  body {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    animation: fadeInAnimation 0.3s ease-in-out forwards;;
   }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

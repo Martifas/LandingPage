@@ -4,13 +4,13 @@ footer {
   padding-bottom: 60px;
 }
 
+footer nav {
+  margin-bottom: 20px;
+}
+
 footer nav a {
   display: block;
   color: black;
-}
-
-footer nav {
-  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 576px) {
@@ -22,5 +22,20 @@ footer nav {
 
   footer nav {
     margin-bottom: 0;
+  }
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeInAnimation 0.3s ease-in-out forwards;;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -90,11 +90,6 @@ nav a {
     transition: all 0.2s ease-in-out;
 }
 
-.contact-message a:hover {
-    background: #cc9a05;
-    border-color: white;
-}
-
 .contact-message .btn {
     border: 0;
     border-radius: 100px;
@@ -103,6 +98,10 @@ nav a {
     outline: none;
     text-align: center;
     vertical-align: bottom;
+}
+
+.submit button:hover {
+    background: #cc9a05;
 }
 
 @media screen and (min-width: 542px) {

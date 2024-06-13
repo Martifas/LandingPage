@@ -7,13 +7,13 @@
     <title>Travel agency: Contact Us</title>
     <meta name="description" content="Travel agency: Homepage">
     <meta name="author" content="You">
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&family=Montserrat:400,700&&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/contact.css" type="text/css">
     <link rel="stylesheet" href="./css/footer.css" type="text/css">
-
 </head>
 
 <body>
@@ -40,45 +40,42 @@
             <p>Got any questions or suggestions? Fill out this form to reach out</p>
         </div>
     </header>
-    <section>
-        <div id="contact-form">
-            <div class="container-md wrap">
-
-                <form action="./contact-success.html">
-                    <div class="name">
-                        <label for="name">Name</label>
-                        <input aria-label="Name" class="form-control" id="name" name="name" type="text"
-                            placeholder="Name" required>
-                    </div>
-                    <div class="surname">
-                        <label for="surname">Surname</label>
-                        <input aria-label="Surname" class="form-control" id="surname" name="surname" type="text"
-                            placeholder="Surname" required>
-                    </div>
-                    <div class="email">
-                        <label for="email">Email address</label>
-                        <input aria-label="Email address" autocomplete="email" class="form-control" id="email"
-                            name="email" placeholder="Email address" required type="email">
-                    </div>
-                    <div class="phone-number">
-                        <label for="phone-number">Phone number</label>
-                        <input aria-label="Phone number" class="form-control" id="phone-number"
-                            placeholder="Phone number" name="phone-number" required type="tel">
-                    </div>
-                    <div class="submit">
-                        <button class="btn btn-warning" title="Search" type="submit">
-                            Submit
-                        </button>
-                    </div>
-                    <div class="contact-text">
-                        <label for="contact-text">How may we help you?</label>
-                        <textarea name="contact-text" id="contact-text" rows="4"
-                            placeholder="Your questions, suggestions" required></textarea>
-                    </div>
-                </form>
-            </div>
+    <div id="contact-form">
+        <div class="container-md wrap">
+            <form action="./contact-success.html">
+                <div class="name">
+                    <label for="name">Name</label>
+                    <input aria-label="Name" class="form-control" id="name" name="name" type="text" placeholder="Name"
+                        required>
+                </div>
+                <div class="surname">
+                    <label for="surname">Surname</label>
+                    <input aria-label="Surname" class="form-control" id="surname" name="surname" type="text"
+                        placeholder="Surname" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email address</label>
+                    <input aria-label="Email address" autocomplete="email" class="form-control" id="email" name="email"
+                        placeholder="Email address" required type="email">
+                </div>
+                <div class="phone-number">
+                    <label for="phone-number">Phone number</label>
+                    <input aria-label="Phone number" class="form-control" id="phone-number" placeholder="Phone number"
+                        name="phone-number" type="tel">
+                </div>
+                <div class="submit">
+                    <button class="btn btn-warning" type="submit">
+                        Submit
+                    </button>
+                </div>
+                <div class="contact-text">
+                    <label for="contact-text">How may we help you?</label>
+                    <textarea name="contact-text" id="contact-text" rows="4" placeholder="Your questions, suggestions"
+                        required></textarea>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
     <footer id="footer">
         <div class="container-md">
             <div>

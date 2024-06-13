@@ -41,10 +41,12 @@ nav img {
     padding-right: 0px;
 }
 
-section {
+#contact-form {
     background-color: whitesmoke;
     min-height: 40vh;
     padding-top: 20px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 }
 
 #contact-form button[type="submit"] {
@@ -151,6 +153,10 @@ section {
     padding-bottom: 20px;
 }
 
+nav img {
+    padding-right: 15px;
+}
+
 @media screen and (min-width: 542px) {
     #logo {
         justify-content: center;
@@ -175,9 +181,5 @@ section {
         background: linear-gradient(to bottom,
                 rgba(0, 0, 0, 0) 60%,
                 rgba(0, 0, 0, 0.7));
-    }
-
-    nav img {
-        padding-right: 10px;
     }
 }

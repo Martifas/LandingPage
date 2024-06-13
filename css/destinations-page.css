@@ -62,7 +62,7 @@ nav {
   font-size: 15px;
 }
 
-.container {
+.container-md {
   padding-top: 15px;
 }
 
@@ -80,7 +80,7 @@ header nav a:hover {
 }
 
 nav img {
-  padding-right: 0px;
+  padding-right: 15px;
 }
 
 #topbar>.wrap {
@@ -95,6 +95,10 @@ nav img {
   height: 40px;
   justify-content: right;
   padding-right: 10px;
+}
+
+.submit button:hover {
+  background: #cc9a05;
 }
 
 @media screen and (min-width: 542px) {

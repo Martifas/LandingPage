@@ -142,7 +142,7 @@ nav a {
 }
 
 nav img {
-    padding-right: 0px;
+    padding-right: 15px;
 }
 
 .destination {
@@ -184,9 +184,23 @@ nav img {
     padding-top: 20px;
 }
 
+.submit .btn {
+    border: 0;
+    border-radius: 100px;
+    color: black;
+    margin-top: 1.5rem;
+    outline: none;
+    text-align: center;
+    vertical-align: bottom;
+}
+
 @media screen and (min-width: 542px) {
     #logo {
         justify-content: center;
+    }
+
+    .destination img {
+        max-height: 400px;
     }
 }
 
@@ -201,10 +215,6 @@ nav img {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         padding-bottom: 1%;
-    }
-
-    .destination {
-        border-radius: 0.5rem;
     }
 
     .destination img {

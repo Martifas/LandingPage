@@ -92,6 +92,7 @@ header h1 {
 
 header nav a:hover {
   border-color: white;
+  color: white
 }
 
 #header {
@@ -161,5 +162,5 @@ nav a {
 }
 
 nav img {
-  padding-right: 0px;
+  padding-right: 15px;
 }
